@@ -1,7 +1,7 @@
 import { movies } from "./db.js"
 
 let list = document.querySelector(".promo__interactive-list")
-let selectedPoster = null; // Храним ссылку на текущий выбранный постер
+let selectedPoster = null;
 
 let newIframe = document.createElement('iframe');
 newIframe.className = 'film'
@@ -13,7 +13,6 @@ newIframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gy
 newIframe.allowFullscreen = true
 
 let iframeContainer = document.getElementById('iframeContainer')
-// Добавляем новый iframe в контейнер
 iframeContainer.appendChild(newIframe)
 
 for (let movie of movies) {
@@ -90,6 +89,3 @@ for (let movie of movies) {
         li.remove()
     }
 }
-
-
-// Как сделать изменить fontSize у actorName
